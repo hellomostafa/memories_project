@@ -13,7 +13,7 @@ app.use('/posts', postRoutes)
 app.use(express.json({limit: "30mb", extended: true}));
 app.use(cors());
 
-const CONNECTION_URL = `mongodb+srv://amir_memory:Eknu9MVEsou1hViy@cluster0.pcwvo.mongodb.net/memories?retryWrites=true&w=majority`;
+const CONNECTION_URL = `mongodb+srv://process.env.DB_USER:process.env.DB_PASS@cluster0.pcwvo.mongodb.net/process.env.DB_NAME?retryWrites=true&w=majority`;
 
 const PORT = process.env.PORT || 5050;
 
